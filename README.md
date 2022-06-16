@@ -1,2 +1,2 @@
 # myPortifolio
-👉🏽 Clique aki https://davidsoaress.github.io/myPortifolio/
+👉🏽 Clique aqui https://davidsoaress.github.io/myPortifolio/
