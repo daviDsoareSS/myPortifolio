@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Spline Sans Mono', monospace;
+    background-color: rgb(22, 22, 22);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0),
+     rgba(0, 0, 0, 0) 65%, rgb(29, 136, 224) 50%,
+      rgb(19, 71, 184) 100%, rgba(0, 0, 0, 0) 100%) ;
+}
+.nav{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 4vw 0vw 0vw;
+    position: relative;
+    
+}
+.nav a{
+    text-decoration: none;
+}
+.nav li{
+    color: white;
+    font-size: 25px;
+    display: inline-flex;
+    list-style-type: none;
+    
+    margin-left: 2vw;
+}
+.nav ul li:hover{
+    transition-delay: .2s;
+    border-bottom: 4px solid #063868;
+}
+#emoji{
+    position: relative;
+    float: right;
+    margin-top: 1vw;
+    margin-right: 22vw;
+    width: 25vw;
+
+}
+.main{
+    margin: 3vw;
+    margin-top: 1vw;
+}
+h1{
+    font-size:30px;
+    margin: 4vw;
+    color: white;    
+}
+#frontText{
+    padding: 0;
+    font-size: 5vw;
+}
+h2{
+    font-family: 'Secular One', sans-serif;
+    margin-left: 4vw;
+    font-size: 8vw;
+    color: #1c82dc;
+}
+.apresentation{
+    font-family: 'Secular One', sans-serif;
+    justify-content: space-evenly;
+    font-size: 23px;
+    width: 35vw;
+    text-align: justify center;
+    margin-left: 4vw;
+    color: rgb(255, 255, 255);
+}
+.session{
+    background-color: black;
+}
+#changeColor{
+    margin-left: 50vw;
+    float: right;
+}
+#nextPage{
+    cursor: pointer;
+    animation-name: animation;
+    animation-delay: 2s;
+    margin-left: 4vw;
+    margin-top: 2vw;
+    border: none;
+    padding: 10px 35px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    border-bottom: 5px solid rgb(27, 71, 165);
+    background-color: #1975c5;
+    box-shadow: 5px 5px 0px rgb(2, 1, 26); 
+    
+}
+#nextPage:hover{
+    padding: 15px 40px;
+    font-weight: bold;
+    transform: translate3d(20px,0,0);
+    animation-duration: 0s;
+    transition: 0.8s;
+    color: #063868;
+    border-bottom: 5px solid rgb(53, 67, 220);
+    background-color: #b5d9f9;
+    box-shadow: 5px 5px 0px rgb(19, 12, 225); 
+}
+
+@keyframes animation{
+    from{
+        transform: translate3d(-100px,0,0);
+        opacity: 0;
+    }
+    to{
+        transform: translate3d(0px,0px,0px);
+        opacity: 1;
+    }
+}
+@keyframes animationEmoji{
+    from{
+        transform: translate3d(100px,-50px, 0px);
+        opacity: 0;
+    }
+    to{
+        transform: translate3d(0px,0px,0px);
+        opacity: 1;
+    }
+}
+.main{
+    animation-name: animation;
+    animation-duration: 0.5s;
+}
+#emoji, #changeColor{
+    animation-name: animationEmoji;
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
