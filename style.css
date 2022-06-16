@@ -140,3 +140,51 @@ h2{
     animation-duration: 1s;
     animation-delay: 0s;
 }
+@media (max-width: 600px){
+    body{
+        position: relative;
+        background: #161611;
+    }
+    .nav h1{
+        display: none;
+    }
+    .nav ul{
+        z-index: 2;
+        width: 100%;
+        margin: 0;
+        position: fixed;
+        padding: 30px;
+        background-color: #063868;
+    }
+    .nav ul li {
+        margin-left: 14vw;
+        text-align: center;        
+
+    }
+    header{
+        margin-top: 4;
+    }
+    header #emoji{
+        width: 80%;
+        position: absolute;
+        left: 10%;
+        margin-top: 20vw;
+        position: relative;
+    }
+
+    .main .title h2,#frontText{
+        width: 100vw;
+        text-align: justify;
+        font-size: 70px
+    }
+    .main p{
+        text-align: justify;
+        width: 90%;
+        font-size: 30px;
+        text-align: ce;
+    }
+    .main button{
+        width: 250px;
+        height: 70px;
+    }
+}
