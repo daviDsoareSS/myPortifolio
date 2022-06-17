@@ -3,33 +3,46 @@
     padding: 0;
     box-sizing: border-box;
 }
-html {
-    scroll-behavior: smooth;
+::-webkit-scrollbar{
+    border-left: 0.1px solid  rgba(255, 255, 255, 0.463);
+    background-color: rgba(255, 255, 255, 0.166);
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color:rgb(244, 123, 79);
 }
 :target {
     scroll-margin-top: .8em;
 }
-body{
+html,body{
+    height: 100%;
+    scroll-behavior: smooth;
     background: linear-gradient(to right , #0c2b5a , #041329);
     color: rgb(255, 255, 255);
     font-family: 'Hammersmith One', sans-serif; 
     overflow-x:hidden;
 }
+* html .container{
+    height: 100%;
+}
 .container{
+    position: relative;
+    min-height: 100%;
     display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+    margin-bottom: 5vw;
+    grid-template-columns: 0.8fr 1.5fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1.2fr 0.9fr 0.8fr;
     grid-template-areas: 
     "sidebar nav nav nav"
     "sidebar grid1 grid2 grid3"
     "sidebar content1 content2 content2"
     "sidebar content3 content3 content3"
     "sidebar content4 content4 content4"
-    "footer footer footer footer"
     ;
 }
 
+/*ANIMAÇÕES*/
 @keyframes slide{
     from{
         transform: translate3d(-50px,0px,0px);
@@ -60,11 +73,8 @@ body{
         opacity: 1;
     }    
 }
-label{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 19px;
-    color: rgba(194, 228, 255, 0.984);
-}
+
+/*TOPO SITE*/
 nav{
     animation-name: slide;
     animation-duration: 1s;
@@ -85,6 +95,7 @@ nav h2{
 
 }
 nav p{
+    text-align: justify;
     color: rgba(216, 239, 255, 0.843);
 
 }
@@ -93,6 +104,9 @@ nav svg{
     margin: 1vw;
     
 }
+
+
+/*GRID-1*/
 .grid1{
     grid-area: grid1;
     padding: 25px;
@@ -104,11 +118,35 @@ nav svg{
     white-space: nowrap;
     margin: 20px;
 }
+label{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 19px;
+    color: rgba(194, 228, 255, 0.984);
+}
+#btnCV{
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 1vw 50px;
+    background-color: rgb(255, 111, 0);
+    color: white;
+    border-style: none;
+    cursor: pointer;
+}
+#btnCV:hover{
+    background-color: rgb(249, 98, 43);
+}
+
+
+/*GRID-2*/
 .grid2{
     padding: 25px;
 
     grid-area: grid2;
 }
+
+
+/*COMPETÊNCIAS*/
 .grid3{
     animation-name: slideLeft;
     animation-duration: 1s;
@@ -155,6 +193,8 @@ nav svg{
     
 }
 
+
+/*SIDEBAR -lado esquerdo*/
 .sidebar{
     font-family: 'Spline Sans Mono', monospace;
     border-right: 10px solid rgba(14, 9, 59, 0.583);
@@ -162,7 +202,7 @@ nav svg{
     grid-area: sidebar;
     position: relative;
     text-align: justify;
-    height: 52vw;
+    height: 42vw;
 }
 .sidebar svg{
     margin: 0 0.7vw
@@ -194,6 +234,8 @@ nav svg{
     background-color: rgba(14, 9, 59, 0.583);
     color: rgb(244, 123, 79);
 }
+
+/*BANCO DE DADOS*/
 .content1{
     animation-name: slideTop;
     animation-duration: 2s;
@@ -201,14 +243,11 @@ nav svg{
     padding: 0 2.5vw;
     grid-area: content1;
 }
-
 .content1 .skill-item{
-    
-    margin-top: 0.5vw;
+    margin-top: 0.6vw;
     flex:  100%;
     width: 100%;
     max-width: 100%;
- 
 }
 .content1 .skill-item h5{
     line-height: 40px;
@@ -226,14 +265,12 @@ nav svg{
     width: 100%;
 }
 .content1 .skill-item .skill-percent{
-
     position: absolute;
     right: 0;
     color: rgb(195, 248, 255);
     top: -40px;
     font-weight: 400;
     font-size: 18px;
-
 }
 .content1 .skill-item .progress .progress-in{
     position: absolute;
@@ -242,8 +279,10 @@ nav svg{
     height: 100%;
     border-radius: 4px;
     background-color: rgba(66, 65, 65, 0.716);
-    
 }
+
+
+/*FERRAMENTAS DESIGN GRÁFICO*/
 .content2{
     animation-name: slideTop;
     animation-duration: 2s;
@@ -254,8 +293,6 @@ nav svg{
     margin-top: 0.5vw;
     flex:  100%;
     width: 100%;
-
- 
 }
 .content2 .skill-item h5{
     line-height: 40px;
@@ -273,14 +310,12 @@ nav svg{
     width: 100%;
 }
 .content2 .skill-item .skill-percent{
-
     position: absolute;
     right: 0;
     color: rgb(195, 248, 255);
     top: -40px;
     font-weight: 400;
     font-size: 18px;
-
 }
 .content2 .skill-item .progress .progress-in{
     position: absolute;
@@ -289,7 +324,6 @@ nav svg{
     height: 100%;
     border-radius: 4px;
     background-color: #f9be83;
-    
 }
 .content2 .skill-item .progress #ps{
     position: absolute;
@@ -307,7 +341,6 @@ nav svg{
     height: 100%;
     border-radius: 4px;
     background-color: #9e3cf3;
-    
 }
 .content2 .skill-item .progress #figma{
     position: absolute;
@@ -316,10 +349,10 @@ nav svg{
     height: 100%;
     border-radius: 4px;
     background-color: #8afba1;
-    
 }
+
+/*FORMAÇÃO ACADÊMICA*/
 .content3{
-   
     border-radius: 5px;
     color: #0c2b5a;
     padding: 30px 10px 30px;
@@ -335,6 +368,9 @@ nav svg{
 .study{
     padding: 0 35px;
 }
+
+
+/*PROJETOS*/
 .content4{
     grid-area: content4;
     padding: 25px;
@@ -423,20 +459,25 @@ nav svg{
 hr{
     margin: 20px 0;
 }
+
+
+/*FOOTER*/
 footer{
-    position: absolute;
-    bottom: -60vw;
+    position: relative;
+    bottom: 0;
     left: 0;
-    right: 0;
     background: #041329;
     border-top: 8px solid rgb(255, 134, 36);
-    height: 16vw;
-    width: 100vw;
+    width: 100%;
+    height: 280px;
     font-family: "Open Sans";
-    padding-top: 40px;
     color: #fff;
 }
 .footer-content{
+    margin: 2vw;
+    position: relative;
+    border-bottom: 10px solid black 100%;
+    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -475,14 +516,17 @@ footer{
 
 }
 footer svg:hover{
-    color: aqua;
+    color: orange;
+}
+footer a:hover{
+    color: orange;
 }
 .socials a:hover i{
-    color: aqua;
+    color: orange;
 }
 
 .footer-bottom{
-    background: #000;
+    background: rgb(0, 0, 0);
     width: 100vw;
     height: 7vw;
     padding: 20px 0;
@@ -496,18 +540,5 @@ footer svg:hover{
 .footer-bottom span{
     text-transform: uppercase;
     opacity: .4;
-    font-weight: 200;
-}
-#btnCV{
-    font-family: 'Hammersmith One', sans-serif;
-    font-size: 20px;
-    border-radius: 10px;
-    padding: 1vw 50px;
-    background-color: rgb(255, 111, 0);
-    color: white;
-    border-style: none;
-    cursor: pointer;
-}
-#btnCV:hover{
-    background-color: rgb(249, 98, 43);
+    font-weight: bolder;
 }
