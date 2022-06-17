@@ -49,6 +49,7 @@ body{
 
 }
 .main{
+    text-align: justify;
     margin: 3vw;
     margin-top: 1vw;
 }
