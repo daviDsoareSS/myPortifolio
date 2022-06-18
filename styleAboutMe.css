@@ -624,21 +624,7 @@ footer a:hover{
         "content4 content4 "
         ;
     }
-    .content4 .projectsContainer #lineVertical{
-        margin-top: 2.3vw;
-        height: 24vw;
-        border-right: 3px solid orange;
-        float: left;
-    }
-    .content4 .projectsContainer .project1{
-        padding: 40px;
-    }
-    .content4 .projectsContainer .project2{
-        padding: 40px;
-    }
-    .content4 .projectsContainer .project3{
-        padding: 40px;
-    }
+    
 }
 @media (max-width: 780px){
     nav{
@@ -653,6 +639,21 @@ footer a:hover{
     .content4 .projectsContainer .project2{
         margin-top: 2vw;
         margin-bottom: 2vw;
+    }
+    .content4 .projectsContainer #lineVertical{
+        margin-top: 0px;
+        height: 14vw;
+        border-right: 3px solid orange;
+        float: left;
+    }
+    .content4 .projectsContainer .project1{
+        padding: 40px;
+    }
+    .content4 .projectsContainer .project2{
+        padding: 40px;
+    }
+    .content4 .projectsContainer .project3{
+        padding: 40px;
     }
     #btnCV{
         padding: 20px 50px;
@@ -719,6 +720,12 @@ footer a:hover{
         font-weight: ;
         text-align: center;
         font-size: 19px;
+    }
+    .content4 .projectsContainer #lineVertical{
+        margin-top: 0px;
+        height: 28vw;
+        border-right: 3px solid orange;
+        float: left;
     }
     
     footer{
